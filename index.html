@@ -71,6 +71,10 @@
 
     /* ===== 地図 ===== */
     .map-wrap{ border-radius:16px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.06); max-width:880px; margin:0 auto; }
+    .map-app-link{ display:inline-flex; align-items:center; gap:.5rem; background:var(--brand); color:#fff;
+      border-radius:999px; padding:.7rem 1.25rem; text-decoration:none; font-weight:700; box-shadow:0 8px 18px rgba(11,94,215,.25);
+      margin-top:1rem; }
+    .map-app-link:hover{ color:#fff; background:#0a4ba8; }
 
     footer{ background:#fff; border-top:1px solid #eef3f6; }
     #copyMsg{ display:none; font-size:.9rem; color:#0b3b68; }
@@ -186,6 +190,11 @@
       <div class="map-wrap ratio ratio-16x9">
         <iframe src="https://www.google.com/maps?q=783-0004+高知県南国市大そね甲1770-6&output=embed"
                 allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Googleマップ"></iframe>
+      </div>
+      <div class="text-center">
+        <a href="https://www.google.com/maps?q=783-0004+高知県南国市大そね甲1770-6" target="_blank" class="map-app-link" rel="noopener noreferrer">
+          <i class="bi bi-geo-alt-fill"></i> アプリで表示
+        </a>
       </div>
       <p class="mt-3">お電話：<a href="tel:0888630555">088-863-0555</a></p>
     </div>
