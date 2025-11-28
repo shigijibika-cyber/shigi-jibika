@@ -54,6 +54,12 @@
 
     /* ===== 診療時間 ===== */
     .time-table{ max-width:880px; margin:0 auto; }
+    .time-symbol{ font-size:1.2rem; font-weight:bold; }
+    .time-symbol.open{ color:#ff8c00; } /* オレンジの丸 */
+    .time-symbol.saturday{ color:#28a745; } /* 緑の三角 */
+    .time-symbol.closed{ color:#666; } /* スラッシュ */
+    .time-legend{ margin-top:1rem; font-size:.9rem; color:#114a73; }
+    .time-legend-item{ margin-bottom:.5rem; }
 
     /* ===== お知らせ ===== */
     .news-wrap{ max-width:880px; margin:0 auto; }
@@ -125,20 +131,59 @@
       <div class="table-responsive time-table">
         <table class="table table-bordered bg-white">
           <thead class="table-primary">
-            <tr><th>曜日</th><th>午前</th><th>午後</th><th>夜間</th></tr>
+            <tr>
+              <th>診療受付時間</th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th>土</th>
+              <th>日</th>
+              <th>祝</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><td>月</td><td>休診</td><td>休診</td><td>休診</td></tr>
-            <tr><td>火</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>休診</td></tr>
-            <tr><td>水</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>18:00〜19:30</td></tr>
-            <tr><td>木</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>休診</td></tr>
-            <tr><td>金</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>18:00〜19:30</td></tr>
-            <tr><td>土</td><td>9:00〜12:30</td><td>14:00〜16:00</td><td>休診</td></tr>
-            <tr><td>日・祝</td><td>休診</td><td>休診</td><td>休診</td></tr>
+            <tr>
+              <td>9:00~12:30</td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol saturday">▲</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+            </tr>
+            <tr>
+              <td>14:30~17:20</td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+            </tr>
+            <tr>
+              <td>18:00~19:30</td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol open">●</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+              <td class="text-center"><span class="time-symbol closed">/</span></td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <p class="text-muted mt-2"></p>
+      <div class="time-legend">
+        <div class="time-legend-item">休診日...水曜、日曜、祝日</div>
+        <div class="time-legend-item">▲土曜日...9:00~12:30</div>
+      </div>
     </div>
   </section>
 
