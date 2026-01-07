@@ -5,64 +5,21 @@
   <title>お知らせ一覧｜信貴耳鼻咽喉科</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
-    :root{
-      --brand:#0b5ed7;
-      --line:#d8e6ef;
-      --text:#114a73;
-    }
-    body{ background:#fff; color:var(--text); }
-    .wrap{ max-width:880px; margin:2rem auto; padding:0 1rem; }
-    .news-card{ background:#fff; border-radius:20px; padding:0; box-shadow:0 6px 12px rgba(0,0,0,.05); overflow:hidden; }
-    .news-accordion .accordion-item{ border:none; border-bottom:1px solid var(--line); }
-    .news-accordion .accordion-item:last-child{ border-bottom:none; }
-    .news-accordion .accordion-button{ background:#fff; color:#0b3b68; font-weight:600; padding:1rem 1.25rem; box-shadow:none; }
-    .news-accordion .accordion-button:not(.collapsed){ background:#fff; color:#0b3b68; }
-    .news-accordion .accordion-button:focus{ box-shadow:none; border-color:transparent; }
-    .news-accordion .accordion-body{ padding:0 1.25rem 1rem; color:#114a73; }
-    .news-date{ color:#0a6a3b; font-weight:700; min-width:10.5em; display:inline-block; margin-right:1rem; }
-    .news-title-text{ color:#0b3b68; display:inline-block; }
+    body{ background:#fff; color:#114a73; }
+    .wrap{ max-width:880px; margin:2rem auto; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1 class="mb-4">お知らせ一覧</h1>
-    <div class="news-card">
-      <div class="accordion news-accordion" id="newsListAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#newsList1" aria-expanded="false" aria-controls="newsList1">
-              <span class="news-date">2025年11月29日</span>
-              <span class="news-title-text">年末年始休診のお知らせ</span>
-            </button>
-          </h2>
-          <div id="newsList1" class="accordion-collapse collapse" data-bs-parent="#newsListAccordion">
-            <div class="accordion-body">
-              12月28日(日)から1月5日(月)まで休診とさせてただきます。年内は12月27日(土)まで、新年は1月6日(火)より平常通り診療いたします。
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#newsList2" aria-expanded="false" aria-controls="newsList2">
-              <span class="news-date">2025年8月4日</span>
-              <span class="news-title-text">休診日のお知らせ</span>
-            </button>
-          </h2>
-          <div id="newsList2" class="accordion-collapse collapse" data-bs-parent="#newsListAccordion">
-            <div class="accordion-body">
-              毎週月曜日・日曜日・祝日を休診日とさせていただきます。
-            </div>
-          </div>
-        </div>
-        <!-- 今後のお知らせをここに追加 -->
-      </div>
-    </div>
+    <ul class="list-group">
+      <li class="list-group-item text-muted">現在、お知らせはありません。</li>
+      <!-- 今後のお知らせをここに追加 -->
+    </ul>
     <div class="mt-4">
       <a class="btn btn-secondary" href="index.html">トップに戻る</a>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

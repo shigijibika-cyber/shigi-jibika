@@ -54,35 +54,19 @@
 
     /* ===== 診療時間 ===== */
     .time-table{ max-width:880px; margin:0 auto; }
-    .time-symbol{ font-size:1.2rem; font-weight:bold; }
-    .time-symbol.open{ color:#ff8c00; } /* オレンジの丸 */
-    .time-symbol.saturday{ color:#28a745; } /* 緑の三角 */
-    .time-symbol.closed{ color:#666; } /* スラッシュ */
-    .time-symbol.blue{ color:#0b5ed7 !important; } /* 青色（⚪︎、△） */
-    .time-symbol.blue.thin{ font-weight:100 !important; } /* △を細く */
-    .time-legend{ margin-top:1rem; font-size:.9rem; color:#114a73; }
-    .time-legend-item{ margin-bottom:.5rem; }
 
     /* ===== お知らせ ===== */
     .news-wrap{ max-width:880px; margin:0 auto; }
-    .news-card{ background:#fff; border-radius:20px; padding:0; box-shadow:0 6px 12px rgba(0,0,0,.05); overflow:hidden; }
-    .news-accordion .accordion-item{ border:none; border-bottom:1px solid var(--line); }
-    .news-accordion .accordion-item:last-child{ border-bottom:none; }
-    .news-accordion .accordion-button{ background:#fff; color:#0b3b68; font-weight:600; padding:1rem 1.25rem; box-shadow:none; }
-    .news-accordion .accordion-button:not(.collapsed){ background:#fff; color:#0b3b68; }
-    .news-accordion .accordion-button:focus{ box-shadow:none; border-color:transparent; }
-    .news-accordion .accordion-body{ padding:0 1.25rem 1rem; color:#114a73; }
-    .news-date{ color:#0a6a3b; font-weight:700; min-width:10.5em; display:inline-block; margin-right:1rem; }
-    .news-title-text{ color:#0b3b68; display:inline-block; }
+    .news-card{ background:#fff; border-radius:20px; padding:1rem; box-shadow:0 6px 12px rgba(0,0,0,.05); }
+    .news-item{ display:flex; gap:1rem; padding:1rem .25rem; border-bottom:1px solid var(--line); align-items:flex-start; }
+    .news-item:last-child{ border-bottom:none; }
+    .news-date{ color:#0a6a3b; font-weight:700; min-width:10.5em; }
+    .news-title{ color:#0b3b68; }
     .news-more{ display:inline-flex; align-items:center; gap:.5rem; background:var(--brand); color:#fff;
       border-radius:999px; padding:.7rem 1.25rem; text-decoration:none; font-weight:700; box-shadow:0 8px 18px rgba(11,94,215,.25); }
 
     /* ===== 地図 ===== */
     .map-wrap{ border-radius:16px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.06); max-width:880px; margin:0 auto; }
-    .map-app-link{ display:inline-flex; align-items:center; gap:.5rem; background:var(--brand); color:#fff;
-      border-radius:999px; padding:.7rem 1.25rem; text-decoration:none; font-weight:700; box-shadow:0 8px 18px rgba(11,94,215,.25);
-      margin-top:1rem; }
-    .map-app-link:hover{ color:#fff; background:#0a4ba8; }
 
     footer{ background:#fff; border-top:1px solid #eef3f6; }
     #copyMsg{ display:none; font-size:.9rem; color:#0b3b68; }
@@ -133,58 +117,20 @@
       <div class="table-responsive time-table">
         <table class="table table-bordered bg-white">
           <thead class="table-primary">
-            <tr>
-              <th>診療受付時間</th>
-              <th>月</th>
-              <th>火</th>
-              <th>水</th>
-              <th>木</th>
-              <th>金</th>
-              <th>土</th>
-              <th>日</th>
-              <th>祝</th>
-            </tr>
+            <tr><th>曜日</th><th>午前</th><th>午後</th><th>夜間</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>9:00~12:30</td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-            </tr>
-            <tr>
-              <td>14:30~17:20</td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol blue thin">△</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-            </tr>
-            <tr>
-              <td>18:00~19:30</td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol blue">⚪︎</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-              <td class="text-center"><span class="time-symbol closed">/</span></td>
-            </tr>
+            <tr><td>月</td><td>休診</td><td>休診</td><td>休診</td></tr>
+            <tr><td>火</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>休診</td></tr>
+            <tr><td>水</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>18:00〜19:30</td></tr>
+            <tr><td>木</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>休診</td></tr>
+            <tr><td>金</td><td>9:00〜12:30</td><td>14:30〜17:20</td><td>18:00〜19:30</td></tr>
+            <tr><td>土</td><td>9:00〜12:30</td><td>14:00〜16:00</td><td>休診</td></tr>
+            <tr><td>日・祝</td><td>休診</td><td>休診</td><td>休診</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="time-legend">
-        <div class="time-legend-item">休診日...月曜、日曜、祝日　　　△土曜日...14:00~16:00</div>
-      </div>
+      <p class="text-muted mt-2"></p>
     </div>
   </section>
 
@@ -193,34 +139,7 @@
     <div class="container news-wrap">
       <h2 class="mb-3">お知らせ</h2>
       <div class="news-card">
-        <div class="accordion news-accordion" id="newsAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#news1" aria-expanded="false" aria-controls="news1">
-                <span class="news-date">2025年11月29日</span>
-                <span class="news-title-text">年末年始休診のお知らせ</span>
-              </button>
-            </h2>
-            <div id="news1" class="accordion-collapse collapse" data-bs-parent="#newsAccordion">
-              <div class="accordion-body">
-                12月28日(日)から1月5日(月)まで休診とさせてただきます。年内は12月27日(土)まで、新年は1月6日(火)より平常通り診療いたします。
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#news2" aria-expanded="false" aria-controls="news2">
-                <span class="news-date">2025年8月4日</span>
-                <span class="news-title-text">休診日のお知らせ</span>
-              </button>
-            </h2>
-            <div id="news2" class="accordion-collapse collapse" data-bs-parent="#newsAccordion">
-              <div class="accordion-body">
-                毎週月曜日・日曜日・祝日を休診日とさせていただきます。
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="mb-0 text-muted">現在、お知らせはありません。</p>
       </div>
       <div class="text-center mt-3">
         <a class="news-more" href="news.html"><i class="bi bi-list-ul"></i> お知らせ一覧へ <i class="bi bi-arrow-right-short"></i></a>
@@ -237,12 +156,7 @@
         <iframe src="https://www.google.com/maps?q=783-0004+高知県南国市大そね甲1770-6&output=embed"
                 allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Googleマップ"></iframe>
       </div>
-      <div class="text-center">
-        <a href="https://www.google.com/maps?q=783-0004+高知県南国市大そね甲1770-6" target="_blank" class="map-app-link" rel="noopener noreferrer">
-          <i class="bi bi-geo-alt-fill"></i> アプリで表示
-        </a>
-      </div>
-      <p class="mt-3">お電話：<a href="tel:0888630555">088-863-0555</a><br>当院へのお問い合わせ・ご相談は、お電話にて受け付けております。</p>
+      <p class="mt-3">お電話：<a href="tel:0888630555">088-863-0555</a></p>
     </div>
   </section>
 
